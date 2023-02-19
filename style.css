@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container{
+    width: 1440px;
+    height: 900px;
+    background: hsl(30, 38%, 92%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px 2px gray;
+}
+
+.card{
+    display: flex;
+    width: 600px;
+    height: 450px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 12px;
+}
+
+.image-container picture img{
+    width: 300px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content div{
+    width: 75%;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: calc(14rem/16);
+    color: hsl(228, 12%, 48%);
+    display: block;
+    margin-top: 30px;
+}
+
+.name{
+    font-family: 'Fraunces', sans-serif;
+    margin-top: 20px;
+    font-size: calc(33rem/16);
+    line-height: 32px;
+}
+
+.description{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: calc(14rem/16);
+    color: hsl(228, 12%, 48%);
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.real-price{
+    font-family: 'Fraunces', sans-serif;
+    font-size: calc(36rem / 16);
+    color: hsl(158, 36%, 37%);
+}
+
+.discount{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(12rem / 16);
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    margin-left: 20px;
+}
+
+.button{
+    background-color: hsl(158, 36%, 37%);
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button span{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(13rem / 16);
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.button:hover{
+    background-color: hsl(158, 38%, 25%);
+    cursor: pointer;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+@media(max-width: 540px){
+    .main-container{
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .card{
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+    }
+
+    .image-container picture img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+    }
+
+    .content div{
+        width: 90%;
+    }
+
+    .title{
+        margin-top: 15px;
+        font-size: calc(12rem / 16);
+        letter-spacing: 4px;
+    }
+
+    .name{
+        font-size: calc(28rem / 16);
+        margin-top: 10px;
+    }
+
+    .description{
+        margin-top: 10px;
+    }
+
+    .price{
+        margin-top: 20px;
+    }
+
+    .real-price{
+        font-size: calc(30rem / 16);
+    }
+
+    .button{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        display: none;
+    }
+}
